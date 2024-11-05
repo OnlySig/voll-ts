@@ -39,7 +39,6 @@ const objImagens: IImagens = {
   grafico
 };
 const Title = ({ img, children } : IProps) => {
-  console.log(objImagens);
   return (
     <StyledContainer>
       { img && <StyledSpan img={objImagens[img as keyof IImagens]}/> }
