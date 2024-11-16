@@ -5,46 +5,46 @@ import { ReactNode } from "react";
 import styled from "styled-components";
 
 interface IProps {
-  img?: string
-  children?: ReactNode
+  img?: string;
+  children?: ReactNode;
 }
 
 interface IImagens {
-  avaliacao: string,
-  grafico: string,
-  consulta: string,
+  avaliacao: string;
+  grafico: string;
+  consulta: string;
 }
 
-const StyledSpan = styled.span<IProps> `
+const StyledSpan = styled.span<IProps>`
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   width: 25px;
   height: 25px;
-  background-image: ${props=> props.img ? `url(${props.img})` : "none"};
+  background-image: ${(props) => (props.img ? `url(${props.img})` : "none")};
 `;
 
-const StyledH2 = styled.h2 `
+const StyledH2 = styled.h2`
   color: var(--azul-claro);
 `;
 
-const StyledContainer = styled.div `
+const StyledContainer = styled.div`
   display: flex;
+  gap: 8px;
   align-items: center;
-`; 
+  margin: 32px 0;
+`;
 
 const objImagens: IImagens = {
   avaliacao: avaliacao,
   consulta,
-  grafico
+  grafico,
 };
-const Title = ({ img, children } : IProps) => {
+const Title = ({ img, children }: IProps) => {
   return (
     <StyledContainer>
-      { img && <StyledSpan img={objImagens[img as keyof IImagens]}/> }
-      <StyledH2>
-        {children}
-      </StyledH2>
+      {img && <StyledSpan img={objImagens[img as keyof IImagens]} />}
+      <StyledH2>{children}</StyledH2>
     </StyledContainer>
   );
 };

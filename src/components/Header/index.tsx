@@ -1,37 +1,32 @@
 import styled from "styled-components";
-import logo from "../../assets/header/logo.png";
-import perfilDefault from "../../assets/header/perfil.png";
-import { Link } from "react-router-dom";
+import medicos from "../../assets/header/medicos.png";
+import test from "../../assets/header/Rectangle1.png";
 
-const StyledHeader = styled.header `
+const StyledHeader = styled.header`
+  position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin: 24px auto 80px auto;
-  img {
-    height: fit-content;
+  background-color: #339cff;
+  justify-content: space-around;
+  h2 {
+    max-width: 588px;
   }
-  div {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-  }
-  a {
-    color: var(--azul-escuro);
-    font-weight: 700;
-  }
+`;
+
+const StyledImg = styled.img`
+  position: absolute;
+  width: 100%;
 `;
 
 const Header = () => {
   return (
     <StyledHeader>
-      <img src={logo} alt="logo da empresa voll."/>
-      <div>
-        <img src={perfilDefault} alt="imagem do perfil default do usuário."/>
-        <Link to="#">
-          Sair
-        </Link>
-      </div>
+      <h2>
+        Encontre profissionais de diversas especialidades e agende sua consulta
+        com facilidade!
+      </h2>
+      <img src={medicos} alt="" />
+      <StyledImg src={test} alt="" />
     </StyledHeader>
   );
 };

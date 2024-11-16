@@ -4,9 +4,6 @@ import whatsapp from "../../assets/footer/whatsapp.png";
 import insta from "../../assets/footer/instagram.png";
 
 const StyledFooter = styled.footer `
-  position: absolute;
-  right: 0;
-  left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;

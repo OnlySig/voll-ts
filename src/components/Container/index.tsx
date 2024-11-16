@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
-export const Container = styled.section `
-  background-color: var(--cinza-claro);
-  border-radius: 16px;
-  padding: 2em;
-  margin-bottom: 80px;
+export const Container = styled.section`
   height: 100%;
+  max-width: 1440px;
+  margin: 66px auto 80px auto;
+  @media screen and (max-width: 1440px) {
+    padding: 0 120px;
+  }
 `;

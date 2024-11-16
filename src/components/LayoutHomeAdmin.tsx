@@ -1,13 +1,13 @@
 import { Outlet } from "react-router-dom";
 import Footer from "./Footer";
-import Header from "./Header";
+import NavBar from "./Nav";
 
 const LayoutHomeAdmin = () => {
   return (
     <>
-      <Header/>
-      <Outlet/>
-      <Footer/>
+      <NavBar />
+      <Outlet />
+      <Footer />
     </>
   );
 };
