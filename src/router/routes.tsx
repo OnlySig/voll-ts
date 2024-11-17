@@ -1,29 +1,31 @@
 import { createBrowserRouter } from "react-router-dom";
 import HomePage from "../pages/Home/HomePage";
-import LayoutPages from "../pages/LayoutPages";
 import LayoutHomeAdmin from "../components/LayoutHomeAdmin";
 import Dashboard from "../pages/Dashboard";
 
 const routes = createBrowserRouter([
   {
     path: "/",
-    element: <LayoutPages/>,
     children: [
       {
-        element: <LayoutHomeAdmin/>,
+        element: <LayoutHomeAdmin />,
         children: [
           {
             path: "",
-            element: <HomePage/>
-          },          
+            element: <HomePage />,
+          },
           {
             path: "/dashboard",
-            element: <Dashboard/>
-          },          
-        ]
-      }
-    ]
-  }
+            element: <Dashboard />,
+          },
+        ],
+      },
+      {
+        path: "/cadastrar",
+        element: <h1>Cadastro dahora</h1>,
+      },
+    ],
+  },
 ]);
 
 export default routes;

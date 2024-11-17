@@ -1,0 +1,30 @@
+[
+  {
+    "categoria": "Neurologista",
+    "value": 1
+  },
+  {
+    "categoria": "Dermatilogista",
+    "value": 2
+  },
+  {
+    "categoria": "Cardiologista",
+    "value": 3
+  },
+  {
+    "categoria": "Ortopedista",
+    "value": 4
+  },
+  {
+    "categoria": "Oftalmologista",
+    "value": 5
+  },
+  {
+    "categoria": "Pediatria",
+    "value": 6
+  },
+  {
+    "categoria": "Reumatologista",
+    "value": 7
+  }
+]

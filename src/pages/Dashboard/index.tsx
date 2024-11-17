@@ -18,12 +18,13 @@ const StyledDiv = styled.div`
 
 const Dashboard = () => {
   const { data: dataConsultas, error: errorConsultas } = useData<IConsulta[]>({
-    endpoint: "consultas",
+    endpoint: "consulta",
   });
   const { data: dataProf, error: errorProf } = useData<IConsulta[]>({
-    endpoint: "profissionais",
+    endpoint: "especialista",
   });
   if (errorConsultas || errorProf) console.log("Erro doidão");
+  console.log(dataConsultas);
   return (
     <Container>
       <StyledDiv>

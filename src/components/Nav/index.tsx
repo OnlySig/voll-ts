@@ -68,7 +68,6 @@ const StyledButton = styled.div`
 `;
 const Nav = () => {
   const { pathname } = useLocation();
-  console.log(pathname);
   return (
     <StyledHeader>
       <img src={logo} alt="logo da empresa voll." />

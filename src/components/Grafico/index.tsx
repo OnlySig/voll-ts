@@ -38,7 +38,7 @@ const Grafico = ({ consultas, prof }: IProps) => {
           </BarChart>
         </ResponsiveContainer>
       </StyledDiv>
-      <Botao>Ver mais</Botao>
+      {dados.length > 4 && <Botao>Ver mais</Botao>}
     </>
   );
 };

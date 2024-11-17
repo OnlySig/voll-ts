@@ -13,6 +13,14 @@ const StyledSection = styled.section`
 
 const Avaliacoes = () => {
   const { data } = useData({ endpoint: "profissionais" });
+  if (!data) {
+    return (
+      <>
+        <Title img={"avaliacao"}>Avaliações de especialistas</Title>
+        <p>Não à avaliações para mostrar</p>
+      </>
+    );
+  }
   return (
     <>
       <Title img={"avaliacao"}>Avaliações de especialistas</Title>
@@ -21,7 +29,7 @@ const Avaliacoes = () => {
           <Card {...avaliacao} key={avaliacao.id} />
         ))}
       </StyledSection>
-      <Botao>Ver mais</Botao>
+      {data?.length > 4 && <Botao>Ver mais</Botao>}
     </>
   );
 };

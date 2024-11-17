@@ -2,16 +2,16 @@ import IConsulta from "../types/IConsulta";
 import IProfissional from "../types/IProfissional";
 import useFetch from "./useFetch";
 
-type DataType = IConsulta[] | IProfissional[]
+type DataType = IConsulta[] | IProfissional[];
 
-const useData = <T extends DataType>({ endpoint } : {endpoint : string}) => {
+const useData = <T extends DataType>({ endpoint }: { endpoint: string }) => {
   const endpoints = {
-    profissionais: "profissionais",
-    consultas: "consultas",
-    avaliacoes: "avaliacoes"
+    especialista: "especialista",
+    consulta: "consulta",
+    avaliacoes: "avaliacoes",
   };
   const url = endpoints[endpoint as keyof typeof endpoints];
-  return useFetch<T>({url});
+  return useFetch<T>({ url });
 };
 
 export default useData;

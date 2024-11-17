@@ -8,14 +8,25 @@ const StyledHeader = styled.header`
   align-items: center;
   background-color: #339cff;
   justify-content: space-around;
+  max-height: 380px;
   h2 {
-    max-width: 588px;
+    max-width: 470px;
+    color: #fff;
   }
 `;
 
 const StyledImg = styled.img`
   position: absolute;
+  object-fit: cover;
+  height: 100%;
   width: 100%;
+`;
+
+const StyledImgMedic = styled.img`
+  position: relative;
+  top: -10px;
+  z-index: 2;
+  height: 400px;
 `;
 
 const Header = () => {
@@ -25,7 +36,7 @@ const Header = () => {
         Encontre profissionais de diversas especialidades e agende sua consulta
         com facilidade!
       </h2>
-      <img src={medicos} alt="" />
+      <StyledImgMedic src={medicos} alt="" />
       <StyledImg src={test} alt="" />
     </StyledHeader>
   );
